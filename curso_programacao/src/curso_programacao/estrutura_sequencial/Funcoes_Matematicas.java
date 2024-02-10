@@ -27,7 +27,7 @@ public class Funcoes_Matematicas {
 		b = Math.abs(z);
 		System.out.println("Valor absoluto de "+x+" = "+ a);
 		System.out.println("Valor absoluto de " +z+" = "+ b);
-	
+		
 	}
 
 }
