@@ -1,9 +1,15 @@
 package curso_programacao;
 
+import java.util.Locale;
+
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World Java");
+		String nome = "Maria";
+		int idade = 31;
+		double renda = 4000.00;
+		Locale.setDefault(Locale.US);// p ara ter . em vez de , na exibição
+		System.out.printf("%s tem %d e ganha R$: %.2f %n",nome,idade,renda);
 	}
 
 }
