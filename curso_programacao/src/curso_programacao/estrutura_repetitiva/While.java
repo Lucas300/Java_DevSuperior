@@ -9,7 +9,7 @@ public class While {
 		int n = sc.nextInt();;
 		int soma_dos_numeros = 0;
 		
-		//repetir enquanto o n for diferente de 0
+		//Repete enquanto o n for diferente de 0
 		while(n != 0) {
 			soma_dos_numeros += n;
 			n = sc.nextInt();
