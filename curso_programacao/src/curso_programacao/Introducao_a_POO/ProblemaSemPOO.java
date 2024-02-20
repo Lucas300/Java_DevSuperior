@@ -2,8 +2,11 @@ package curso_programacao.Introducao_a_POO;
 
 import java.util.Scanner;
 
+import curso_programacao.Introducao_a_POO.entities.Triangle;
+
 public class ProblemaSemPOO {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		/*
 		 Fazer um programa para ler as medidas dos lados de dois triangulos
@@ -11,23 +14,27 @@ public class ProblemaSemPOO {
 		e dizer qual dos dois triangulos possui a maior area
 		*/
 		Scanner ler = new Scanner(System.in);
-		double xA,xB,xC, yA,yB,yC;
+		
+		//Objetos dinamicos ficam alocados no Heap
+		Triangle x , y;
+		x = new Triangle();
+		y = new Triangle();
 		
 		System.out.println("Enter the measures of triangle X: ");
-		xA = ler.nextDouble();
-		xB = ler.nextDouble();
-		xC = ler.nextDouble();
+		x.a = ler.nextDouble();
+		x.b = ler.nextDouble();
+		x.c = ler.nextDouble();
 		
 		System.out.println("Enter the measures of triangle Y: ");
-		yA = ler.nextDouble();
-		yB = ler.nextDouble();
-		yC = ler.nextDouble();
+		y.a = ler.nextDouble();
+		y.b = ler.nextDouble();
+		y.c = ler.nextDouble();
 		
-		double p = (xA + xB + xC) / 2.0;
-		double areaX = Math.sqrt(p *(p - xA)*(p - xB)*(p -xC));
+		double p = (x.a + x.b + x.c) / 2.0;
+		double areaX = Math.sqrt(p *(p - x.a)*(p - x.b)*(p -x.c));
 		
-		p = (yA + yB + yC) / 2.0;
-		double areaY = Math.sqrt(p *(p - yA)*(p - yB)*(p -yC));
+		p = (y.a + y.b + y.c) / 2.0;
+		double areaY = Math.sqrt(p *(p - y.a)*(p - y.b)*(p -y.c));
 		
 		System.out.printf("Triangle X area: %.4f %n",areaX);
 		System.out.printf("Triangle Y area: %.4f %n",areaY);
