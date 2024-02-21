@@ -14,10 +14,11 @@ public class Aplication {
 		System.out.print("Quantity: ");
 		product.quantity = ler.nextInt();
 		
+		
 		product.addProducts(0);
 		product.removeProducts(0);
-		
-		System.out.println(product.totalValueInStock());
+		// automaticamente o java adiciona o .toString()
+		System.out.println(product);
 		
 		ler.close();
 	}
