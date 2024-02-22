@@ -8,12 +8,14 @@ public class Membros_Estaticos {
 	
 	public static void main(String[]args) {
 		Scanner ler = new Scanner(System.in);
+		Calculator calculator = new Calculator();
+		
 		System.out.println("Enter radius: ");
 		double radius = ler.nextDouble();
 
-		double c = circumference(radius);
+		double c = calculator.circumference(radius);
 
-		double v = volume(radius);
+		double v = calculator.volume(radius);
 
 		System.out.printf("Circuference: %.2f %n", c);
 		System.out.printf("Volume: %.2f %n", v);
@@ -22,11 +24,5 @@ public class Membros_Estaticos {
 		ler.close();
 	}
 
-	public static double circumference(double radius) {
-		return (double)(2.0 * PI * radius);
-	}
-
-	public static double volume(double radius) {
-		return (double)(4.0 * PI * radius * radius * radius / 3.0);
-	}
+	
 }
