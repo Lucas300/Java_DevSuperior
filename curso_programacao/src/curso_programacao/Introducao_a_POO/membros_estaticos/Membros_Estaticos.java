@@ -6,6 +6,7 @@ public class Membros_Estaticos {
 	//constante
 	public static final double PI = 3.14159;
 	
+	@SuppressWarnings("unused")
 	public static void main(String[]args) {
 		Scanner ler = new Scanner(System.in);
 		Calculator calculator = new Calculator();
@@ -13,13 +14,13 @@ public class Membros_Estaticos {
 		System.out.println("Enter radius: ");
 		double radius = ler.nextDouble();
 
-		double c = calculator.circumference(radius);
+		double c = Calculator.circumference(radius);
 
-		double v = calculator.volume(radius);
+		double v = Calculator.volume(radius);
 
 		System.out.printf("Circuference: %.2f %n", c);
 		System.out.printf("Volume: %.2f %n", v);
-		System.out.printf("PI value: %.2f %n", PI);
+		System.out.printf("PI value: %.2f %n", Calculator.PI);
 
 		ler.close();
 	}
