@@ -12,10 +12,9 @@ public class Aplication {
 		String name = ler.nextLine();
 		System.out.print("Price: ");
 		double price = ler.nextDouble();
-		System.out.print("Quantity in stock: ");
-		int quantity = ler.nextInt();
 
-		Produto product = new Produto(name, price, quantity);
+		
+		Produto product = new Produto(name, price);
 		
 		//exibindo o valor do toString();
 		System.out.println("Data: "+product);
@@ -23,6 +22,7 @@ public class Aplication {
 		//perguntando quantos o usuario vai adicionar a mais
 		System.out.print("Enter the number of product to be added in stock:");
 		int add = ler.nextInt();
+		
 		product.addProducts(add);
 		//exibindo dados atualizados
 		System.out.println("Updated data: "+product);
