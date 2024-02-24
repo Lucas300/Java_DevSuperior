@@ -11,12 +11,10 @@ public class CotacaoDolar {
 		cc.dollar = ler.nextDouble();
 		System.out.print("How many dollars will be bought: ");
 		cc.quantidade = ler.nextDouble();
-		
+
 		double total = cc.conversion(cc.dollar, cc.quantidade);
-		System.out.printf("Amount to paid in reais: %.2f",total);
-		
-		
-		
+		System.out.printf("Amount to paid in reais: %.2f", total);
+
 		ler.close();
 	}
-}	
+}

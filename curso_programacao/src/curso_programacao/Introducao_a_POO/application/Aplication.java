@@ -7,18 +7,19 @@ public class Aplication {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		//instanciando objeto e colocando dados nos atributos
-		Produto product = new Produto();
+		
 		System.out.print("Name: ");
-		product.name = ler.next();
+		String name = ler.nextLine();
 		System.out.print("Price: ");
-		product.price = ler.nextDouble();
+		double price = ler.nextDouble();
 		System.out.print("Quantity in stock: ");
-		product.quantity = ler.nextInt();
+		int quantity = ler.nextInt();
+
+		Produto product = new Produto(name, price, quantity);
 		
 		//exibindo o valor do toString();
 		System.out.println("Data: "+product);
 		System.out.println();
-		
 		//perguntando quantos o usuario vai adicionar a mais
 		System.out.print("Enter the number of product to be added in stock:");
 		int add = ler.nextInt();

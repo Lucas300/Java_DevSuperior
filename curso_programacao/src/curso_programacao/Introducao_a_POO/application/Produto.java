@@ -5,6 +5,13 @@ public class Produto {
 	public double price;
 	public int quantity;
 	
+	//podemos criar um construtor para que o programa não deixe salvar sem dados
+	public Produto(String name, double price, int quantity){
+		
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
 	public double totalValueInStock() {
 		double total = price * quantity;
 		return total;
