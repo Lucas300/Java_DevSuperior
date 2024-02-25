@@ -1,7 +1,8 @@
 package curso_programacao.Introducao_a_POO.application;
 
 public class Produto {
-	private String name;
+	
+	String name;
 	private double price;
 	private int quantity;
 
