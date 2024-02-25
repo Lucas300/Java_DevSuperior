@@ -31,7 +31,7 @@ public class Aplication {
 		System.out.print("Enter the number of product to be removed from stock:");
 		int remove = ler.nextInt();
 		product.removeProducts(remove);
-		//exibindo dados atualizados
+		//exibindo dadmos atualizados
 		System.out.println("Updated data: "+product);
 
 		product.setName("Computador");

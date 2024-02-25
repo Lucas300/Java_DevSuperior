@@ -9,6 +9,8 @@ public class Produto {
 	public Produto() {
 	}
 
+	// para criar os contrutores = • Botão direito -> Source -> Generate Constructor using Fields
+	
 	public Produto(String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
@@ -28,20 +30,26 @@ public class Produto {
 	public void addProducts(int quantity) {
 		this.quantity += quantity;
 	}
+	
+	//para criar os GETTERS e SETTES Botão direito -> Source -> Generate Getters and Setters
+	public String getName() {
+		return name;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getName() {
-		return this.name;
+
+	public double getPrice() {
+		return price;
 	}
+
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public double getPrice() {
-		return this.price;
-	}
+	
 
-//	public void setQuantity(int quantity) {
+	//	public void setQuantity(int quantity) {
 //		this.quantity = quantity;
 //	}
 	public int getQuantity() {
