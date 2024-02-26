@@ -6,23 +6,14 @@ public class Account {
 	private double saldo;
 	
 	
-	public Account(int number, String name, double saldo) {
+	public Account(int number, String name, double depositoInicial) {
 		this.number = number;
 		this.name = name;
-		this.saldo = saldo;
-		if(saldo > 0) {
-			this.saldo = saldo;
-		}else {
-			this.saldo = 0.00;
-		}
+		depositar(depositoInicial);
 	}
 
 	public int getNumber() {
 		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
 	}
 
 	public String getName() {
@@ -37,9 +28,6 @@ public class Account {
 		return saldo;
 	}
 
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
 	public double depositar(double number) {
 		return this.saldo += number;
 	}
