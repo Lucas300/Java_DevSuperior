@@ -43,9 +43,6 @@ public class Account {
 	public String toString() {
 		return String.format("Account %d Holder:%s, Balance: $%.2f",getNumber(),getName(),getSaldo());
 	}
-	
-	
-	
 	//alterar nome 
 	//não alterar numero da conta
 	//ter metodos de saques(taxa de saque R$:5,00) e depositos
