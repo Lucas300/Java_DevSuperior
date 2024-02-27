@@ -16,15 +16,20 @@ public class Banco {
 		System.out.print("Is there na initial value(y/n):");
 		String s = ler.next();
 
+		Account account;
+		
 		if (s.equals("y")) {
 			System.out.print("Enter initial deposit value:");
 			entry = ler.nextDouble();
+			account = new Account(number, name, entry);
 		} else {
 			entry = 0.00;
+			account = new Account(number, name);
 		}
-		Account account = new Account(number, name, entry);
 
+		
 		System.out.println("Account data:");
+
 		System.out.println(account);
 		System.out.println();
 
@@ -34,7 +39,7 @@ public class Banco {
 		System.out.println("Updated account data:");
 		System.out.println(account);
 		System.out.println();
-		
+
 		System.out.print("Enter withdraw value:");
 		double exit = ler.nextDouble();
 		account.sacar(exit);

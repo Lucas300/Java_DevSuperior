@@ -9,9 +9,15 @@ public class Account {
 	public Account(int number, String name, double depositoInicial) {
 		this.number = number;
 		this.name = name;
+		//encapsulando o metodo depositar
 		depositar(depositoInicial);
 	}
+	public Account(int number, String name) {
+		this.number = number;
+		this.name = name;
+	}
 
+	
 	public int getNumber() {
 		return number;
 	}
