@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Vetores {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		int n = ler.nextInt();
@@ -17,6 +18,8 @@ public class Vetores {
 		}
 		double media = total / n;
 		System.out.printf("Average height = %.2f", media);
+	
+		ler.close();
 	}
 
 }
