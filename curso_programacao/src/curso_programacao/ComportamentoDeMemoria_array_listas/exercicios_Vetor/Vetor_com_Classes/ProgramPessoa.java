@@ -2,8 +2,6 @@ package curso_programacao.ComportamentoDeMemoria_array_listas.exercicios_Vetor.V
 
 import java.util.Scanner;
 
-import curso_programacao.ComportamentoDeMemoria_array_listas.ClasseProduto;
-
 public class ProgramPessoa {
 
 	public static void main(String[] args) {
@@ -25,20 +23,22 @@ public class ProgramPessoa {
 			altura = ler.nextDouble();
 			vect[i] = new Pessoa(nome, idade, altura);
 			total = total + vect[i].getAltura();
-			if (vect[i].getAltura() < 16) {
-				contador++;
+			if (idade< 16) {
+				contador += 1 ;
 			}
 		}
-		double media = total / n;
-		double porcentagem = contador/n;
-		System.out.println("Altura media: "+media);
-		System.out.println("Pessoas com menos de 16 anos:"+porcentagem);
+		double media = total / n; 
+		int porcentagem =  (int)(contador / n * 100); 
+
+		System.out.printf("Altura media: %.2f %n", media);
+		System.out.printf("Pessoas com menos de 16 anos: %d",porcentagem);
+		System.out.println("%");
 		for (int i = 0; i < n; i++) {
-			if(vect[i].getAltura() < 16) {
+			if (vect[i].getIdade() < 16) {
 				System.out.println(vect[i].getNome());
 			}
 		}
-		
+
 		ler.close();
 	}
 
