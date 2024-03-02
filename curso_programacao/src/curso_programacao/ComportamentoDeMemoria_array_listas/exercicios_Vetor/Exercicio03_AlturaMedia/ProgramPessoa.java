@@ -1,4 +1,4 @@
-package curso_programacao.ComportamentoDeMemoria_array_listas.exercicios_Vetor.Vetor_com_Classes;
+package curso_programacao.ComportamentoDeMemoria_array_listas.exercicios_Vetor.Exercicio03_AlturaMedia;
 
 import java.util.Scanner;
 

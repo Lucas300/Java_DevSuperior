@@ -3,6 +3,7 @@ package curso_programacao.ComportamentoDeMemoria_array_listas.exercicios_Vetor;
 import java.util.Scanner;
 
 public class Exercicio08_MediaDosPares {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		System.out.println("Qual o tamanho dos vetores?");
