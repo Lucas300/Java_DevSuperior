@@ -40,6 +40,6 @@ public class Funcionario {
 	
 	
 	public String toString() {
-		return getId()+","+getNome()+","+getSalario();
+		return String.format("%d, %s, %.2f", getId(), getNome(), getSalario());
 	}
 }
