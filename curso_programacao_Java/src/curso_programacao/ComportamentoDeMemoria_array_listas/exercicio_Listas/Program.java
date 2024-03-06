@@ -13,6 +13,7 @@ public class Program {
 		
 		List<Funcionario> listaFuncionario = new ArrayList<>();
 		
+		//inserindo dados na lista
 		for (int i = 0; i < n; i++) {
 			System.out.println("Emplloyee: "+(i+1));
 			System.out.print("ID: ");
@@ -25,18 +26,23 @@ public class Program {
 			System.out.println();
 		}
 		
+		
 		System.out.print("Enter the emloyee id that will have salary increase: ");
 		int id = ler.nextInt();
 		boolean usuarioEncontrado = false;
 		
+		//verificando se tem o id digitado
 		for (Funcionario funcionario : listaFuncionario) {
 			if (funcionario.getId() == id) {
 				System.out.print("Enter the percentage:");
 				int porcentagem = ler.nextInt();
+				//aplicando o aumento 
 				funcionario.aumentoPorPorcentagem(porcentagem);
 				usuarioEncontrado = true;
 			}
 		}
+		
+		//caso o id não seja encontrado a variavel usuario encontra sera false e mostrara que não achou o id 
 		if (!usuarioEncontrado) {
 			System.out.println("This id does not exist!");
 		}
