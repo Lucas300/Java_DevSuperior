@@ -7,7 +7,8 @@ package curso_programacao.Topicos_Especiais_Data_Hora;
 
 	public class TrabalhandoComDatas_date_Java7 {
 
-	    public static void main(String[] args) {
+	    @SuppressWarnings("deprecation")
+		public static void main(String[] args) {
 	        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("EEEE, dd 'de' MMMM 'de' yyyy", new Locale("pt", "BR"));
 	        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("EEEE, dd 'de' MMMM 'de' yyyy HH:mm:ss", new Locale("pt", "BR"));
 
