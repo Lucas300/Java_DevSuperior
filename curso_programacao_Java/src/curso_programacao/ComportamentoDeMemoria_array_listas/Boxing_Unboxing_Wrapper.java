@@ -1,6 +1,7 @@
 package curso_programacao.ComportamentoDeMemoria_array_listas;
 
 public class Boxing_Unboxing_Wrapper{
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		//Boxing
 		//É o processo de conversão de um objeto tipo valor para um objeto tipo referência compativel

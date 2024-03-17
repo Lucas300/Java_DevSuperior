@@ -7,6 +7,7 @@ import java.util.Scanner;
 		Os valores dos coeficientes devem ser digitados um por linha
  	*/
 public class Comentarios {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);

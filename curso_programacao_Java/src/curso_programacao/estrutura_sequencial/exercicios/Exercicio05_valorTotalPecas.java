@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Exercicio05_valorTotalPecas {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		int codigo1 = entrada.nextInt();
