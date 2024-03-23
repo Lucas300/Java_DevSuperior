@@ -73,19 +73,17 @@ public class Post {
 
 	//Usamos o String builder para retornos maiores 
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		//append siginifica acrescentar no final , usado pra concatenar Strings
-		sb.append(title + "\n");
-		sb.append(likes);
-		sb.append(" Likes - ");
-		sb.append(sdf.format(moment)+"\n");
-		sb.append(content + "\n");
-		sb.append("Comments:\n");
-		for (Comment c: comments) {
-			sb.append(c.getText()+"\n");
-		}
-		return sb.toString();
-		
-		
+	    StringBuilder sb = new StringBuilder();
+	    //append significa acrescentar no final, usado para concatenar Strings
+	    sb.append(title).append("\n");
+	    sb.append(likes).append(" Likes - ");
+	    sb.append(sdf.format(moment)).append("\n");
+	    sb.append(content).append("\n");
+	    sb.append("Comments:\n");
+	    for (Comment c: comments) {
+	        sb.append(c.getText()).append("\n");
+	    }
+	    return sb.toString();
 	}
+
 }
