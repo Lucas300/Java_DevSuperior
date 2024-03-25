@@ -8,16 +8,18 @@ import java.util.List;
 public class Order {
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	private Date moment;
+	
 	private OrderStatus status;
+	
 	private Client client;
 	
-	List<OrderItem> orderitem = new ArrayList<OrderItem>();
+	private List<OrderItem> items = new ArrayList<OrderItem>();
 	
 	public Order() {	
 	}
 
+	//não use collection nos construtores
 	public Order(Date moment, OrderStatus status, Client client) {
-		super();
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
@@ -47,25 +49,22 @@ public class Order {
 		this.client = client;
 	}
 
-	public List<OrderItem> getOrderitem() {
-		return orderitem;
-	}
-
 	public void addItem(OrderItem item) {
-		orderitem.add(item);
+		items.add(item);
 	}
 	public void removeItem(OrderItem item) {
-		orderitem.remove(item);
+		items.remove(item);
 	}
-	public Double total() {
-		Double total = 0.0;
-		for (OrderItem orderItem2 : orderitem) {
-			total = total + orderItem2.subTotal();
+	
+	public double total() {
+		double sum = 0.0;
+		for (OrderItem it : items) {
+			sum += it.subTotal();
 		}
-		return total;
+		return sum;
 	}
 	
-	
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Order moment: ");
@@ -75,18 +74,13 @@ public class Order {
 		sb.append("Client: ");
 		sb.append(client + "\n");
 		sb.append("Order items:\n");
-		for (OrderItem item : orderitem) {
+		for (OrderItem item : items) {
 			sb.append(item + "\n");
 		}
 		sb.append("Total price: $");
 		sb.append(String.format("%.2f", total()));
 		return sb.toString();
 	}
-	
-	
-	
-	
-	
 	
 	
 

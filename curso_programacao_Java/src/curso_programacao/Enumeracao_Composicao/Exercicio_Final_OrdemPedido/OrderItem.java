@@ -8,6 +8,7 @@ public class OrderItem {
 	private Integer quantity;
 	private Double price;
 	
+	//contem referencia para um produto
 	private Product product;
 	
 	List<Product> products = new ArrayList<Product>();
@@ -18,7 +19,6 @@ public class OrderItem {
 
 
 	public OrderItem(Integer quantity, Double price, Product product) {
-	
 		this.quantity = quantity;
 		this.price = price;
 		this.product = product;
@@ -56,8 +56,16 @@ public class OrderItem {
 		return products;
 	}
 
+	public Double subTotal() {
+		return price * quantity;
+	}
 	
-
+	@Override
+	public String toString() {
+		return getProduct().getName()+", $"+String.format("%.2f", price)+", Quantity: "+ quantity + ", Subtotal: "+String.format("$%.2f ", subTotal());
+	}
+	
+	/*
 	public Double subTotal() {
 		Double total = 0.0;
 		for (Product product : products) {
@@ -66,24 +74,8 @@ public class OrderItem {
 	return total;
 	}
 	
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		for (Product product : products) {
-			sb.append(product.getName())
-			.append(", $")
-			.append(product.getPrice())
-			.append(", ")
-			.append(getQuantity())
-			.append(", ")
-			.append(" Subtotal:")
-			.append(subTotal())
-			.append("\n");	
-		}
-		
-		return sb.toString();
-		
-	}
 	
+	*/
 	
 	
 }
