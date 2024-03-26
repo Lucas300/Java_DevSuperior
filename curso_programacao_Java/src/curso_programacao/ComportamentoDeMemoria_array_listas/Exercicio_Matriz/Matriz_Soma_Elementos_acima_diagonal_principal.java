@@ -1,4 +1,4 @@
-package curso_programacao.ComportamentoDeMemoria_array_listas;
+package curso_programacao.ComportamentoDeMemoria_array_listas.Exercicio_Matriz;
 
 import java.util.Scanner;
 
