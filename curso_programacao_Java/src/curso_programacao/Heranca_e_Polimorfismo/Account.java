@@ -1,6 +1,7 @@
 package curso_programacao.Heranca_e_Polimorfismo;
 
-public class Account {
+//A classe abstrata não pode ser instanciada, somente as subclasses
+public abstract class Account {
 	private Integer number;
 	private String holder;
 	//usei o protected para reusar esse atributo dentro de um metodo da subclasse
