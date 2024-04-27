@@ -3,6 +3,7 @@ package curso_programacao.Heranca_e_Polimorfismo.Metodos_abstratos;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.awt.Color;
 
 public class Program {
 
@@ -18,15 +19,15 @@ public class Program {
 			System.out.print("Rectangle or cCircle (r/c)?");
 			char ch = ler.next().charAt(0);
 			System.out.print("Color (BLACK/BLUE/RED):");
-			Color color = Color.valueOf(ler.next());
+			Color color = Color.getColor(ler.next());
 			if(ch == 'r'){
 				System.out.print("Width:");
 				double width = ler.nextDouble();
-				System.out.println("Height:");
+				System.out.print("Height:");
 				double height = ler.nextDouble();
-				list.add(new Rectangle(color, width, height));
+				list.add(new Rectangle(color,width,height));
 			}else {
-				System.out.println("Radius:");
+				System.out.print("Radius:");
 				double radius = ler.nextDouble();
 				list.add(new Circle(color, radius));
 			}
@@ -36,8 +37,9 @@ public class Program {
 		System.out.println();
 		System.out.println("SHAPE AREAS:");
 		for (Shape shape : list) {
-			System.out.println(shape.area());
+			System.out.println(String.format("%.2f", shape.area()));
 		}
+		ler.close();
 	}
 
 }
