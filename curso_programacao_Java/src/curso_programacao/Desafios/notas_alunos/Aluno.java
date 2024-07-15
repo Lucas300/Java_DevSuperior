@@ -1,4 +1,4 @@
-package Desafio_de_codigo.notas_alunos;
+package curso_programacao.Desafios.notas_alunos;
 
 public class Aluno {
     private String nome;

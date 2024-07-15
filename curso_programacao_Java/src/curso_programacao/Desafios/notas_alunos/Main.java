@@ -1,4 +1,4 @@
-package Desafio_de_codigo.notas_alunos;
+package curso_programacao.Desafios.notas_alunos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
