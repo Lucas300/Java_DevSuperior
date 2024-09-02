@@ -30,5 +30,5 @@ public class Stack_pilha {
         boolean estaVazia = pilha.isEmpty();
         System.out.println("A pilha está vazia? " + estaVazia);
     }
-}
+} 
 
