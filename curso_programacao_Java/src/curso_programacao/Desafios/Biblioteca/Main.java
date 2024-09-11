@@ -4,50 +4,39 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Criando a biblioteca
         Biblioteca biblioteca = new Biblioteca();
-        
-        while (true) {
-            System.out.println("\nSistema de Gerenciamento de Biblioteca");
-            System.out.println("1. Adicionar Livro");
-            System.out.println("2. Listar Livros");
-            System.out.println("3. Emprestar Livro");
-            System.out.println("4. Devolver Livro");
-            System.out.println("5. Sair");
-            System.out.print("Escolha uma opção: ");
-            
-            int opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
-            
-            switch (opcao) {
-                case 1:
-                    System.out.print("Título do Livro: ");
-                    String titulo = scanner.nextLine();
-                    System.out.print("Autor do Livro: ");
-                    String autor = scanner.nextLine();
-                    Livro livro = new Livro(titulo, autor);
-                    biblioteca.adicionarLivro(livro);
-                    break;
-                case 2:
-                    biblioteca.listarLivros();
-                    break;
-                case 3:
-                    System.out.print("Título do Livro para Empréstimo: ");
-                    titulo = scanner.nextLine();
-                    biblioteca.emprestarLivro(titulo);
-                    break;
-                case 4:
-                    System.out.print("Título do Livro para Devolução: ");
-                    titulo = scanner.nextLine();
-                    biblioteca.devolverLivro(titulo);
-                    break;
-                case 5:
-                    System.out.println("Saindo...");
-                    scanner.close();
-                    return;
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
-            }
-        }
+
+        // Criando livros
+        Livro livro1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien");
+        Livro livro2 = new Livro("1984", "George Orwell");
+        Livro livro3 = new Livro("A Revolução dos Bichos", "George Orwell");
+
+        // Adicionando livros à biblioteca
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+        biblioteca.adicionarLivro(livro3);
+
+        // Criando membros
+        Membro membro1 = new Membro("Alice");
+        Membro membro2 = new Membro("João");
+
+        // Adicionando membros à biblioteca
+        biblioteca.adicionarMembro(membro1);
+        biblioteca.adicionarMembro(membro2);
+
+        // Emprestar livros
+        biblioteca.emprestarLivro(livro1, membro1);
+        biblioteca.emprestarLivro(livro2, membro2);
+
+        // Listar livros disponíveis
+        biblioteca.listarLivrosDisponiveis();
+
+        // Devolver livros
+        biblioteca.devolverLivro(livro1, membro1);
+        biblioteca.devolverLivro(livro2, membro2);
+
+        // Listar livros disponíveis após devoluções
+        biblioteca.listarLivrosDisponiveis();
     }
 }

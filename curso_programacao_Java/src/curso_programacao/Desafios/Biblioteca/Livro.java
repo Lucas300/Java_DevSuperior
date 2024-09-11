@@ -3,41 +3,35 @@ package curso_programacao.Desafios.Biblioteca;
 public class Livro {
     private String titulo;
     private String autor;
-    private boolean estaEmprestado;
-    
+    private boolean emprestado;
+
+    // Construtor
     public Livro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
-        this.estaEmprestado = false;
+        this.emprestado = false;
     }
-    
+
+    // Métodos Getters e Setters
     public String getTitulo() {
         return titulo;
     }
-    
+
     public String getAutor() {
         return autor;
     }
-    
+
     public boolean isEmprestado() {
-        return estaEmprestado;
+        return emprestado;
     }
-    
-    public void emprestar() {
-        if (!estaEmprestado) {
-            estaEmprestado = true;
-        }
+
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
     }
-    
-    public void devolver() {
-        if (estaEmprestado) {
-            estaEmprestado = false;
-        }
-    }
-    
+
+    // Exibe informações sobre o livro
     @Override
     public String toString() {
-        return "Livro{" + "titulo='" + titulo + '\'' + ", autor='" + autor + '\'' + ", emprestado=" + estaEmprestado + '}';
+        return "Livro: " + titulo + " | Autor: " + autor + " | Emprestado: " + (emprestado ? "Sim" : "Não");
     }
 }
-
